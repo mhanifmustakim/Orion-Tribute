@@ -36,9 +36,6 @@
     position: sticky;
     top: 0;
 }
-/* #main{
-
-} */
 #footer{
     padding: var(--head-foot-padding);
     text-align: center;
@@ -62,6 +59,19 @@
 #special-form{
     padding: 0.5rem 0;
     font-size: 0.8em;
+}
+.yt-vid iframe{
+    width: 300px;
+    height: 170px;
+}
+.desc{
+    padding-top: 1rem;
+}
+@media (min-width: 380px){
+    .yt-vid iframe{
+        width: 360px;
+        height: 205px;
+    }
 }
 @media (min-width: 480px){
     :root{
@@ -96,6 +106,17 @@
         /* color: black; */
         width: 100%;
         background-color: rgba(0,0,0,0.5);
+    }
+    .yt-vid iframe{
+        width: 450px;
+        height: 255px;
+    }
+}
+
+@media (min-width: 620px){
+    .yt-vid iframe{
+        width: 560px;
+        height: 315px;
     }
 }
 
