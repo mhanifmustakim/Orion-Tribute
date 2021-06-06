@@ -1,0 +1,106 @@
+:root{
+    font-size: 15px;
+    --header-color: #333652;
+    --bg-color: #90ADC6;
+    --text-header: white;
+    --text-main: #121212;
+    --head-foot-padding: 1rem 0;
+}
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#content{
+    text-align: center;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: grid;
+    grid-template-rows: auto auto 1fr  auto;
+}
+#header-img{
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    padding: var(--head-foot-padding);
+    background-color: black;
+}
+#header{
+    color: var(--text-header);
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem 0;
+    background-color: var(--header-color);
+    position: sticky;
+    top: 0;
+}
+/* #main{
+
+} */
+#footer{
+    padding: var(--head-foot-padding);
+    text-align: center;
+    border-top: 0.05rem solid rgba(255,255,255,0.2);
+    width: 80%;
+    justify-self: center;
+}
+#container{
+    width: clamp(300px, 90%, 600px);
+    padding: 1rem 0;
+    margin: 0 auto;
+    display: grid;
+    height: 100%;
+    grid-template-rows: 1fr auto;
+    place-items: center;
+    gap: 1rem;
+}
+#special-content{
+    font-size: 1.2rem;
+}
+#special-form{
+    padding: 0.5rem 0;
+    font-size: 0.8em;
+}
+@media (min-width: 480px){
+    :root{
+        font-size: 17px;
+    }
+    *{
+        position:relative;
+    }
+    #content{
+        --text-main: white;
+        color: var(--text-main);
+        background: url(Assets/OrionLogo.jpeg) no-repeat center center fixed;
+        background-size: cover;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        grid-template-rows: auto 1fr auto;
+    }
+    #content::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    #header-img{
+        display: none;
+    }
+    #footer{
+        /* color: black; */
+        width: 100%;
+        background-color: rgba(0,0,0,0.5);
+    }
+}
+
+@media (min-width: 769px){
+    :root{
+        font-size: 20px;
+    }
+}
