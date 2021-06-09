@@ -9,7 +9,7 @@ form.addEventListener("submit", (e) => {
         const content = getObject(input);
         renderContent(content);
     } else {
-        alert("Your code is invalid!")
+        alert("Oops! salah la, cuba lagi :)")
     }
     e.target[0].value = "";
 })
