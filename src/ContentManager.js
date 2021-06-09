@@ -16,7 +16,7 @@ const specialCodes = [
 
 function checkForCode(input) {
     for (let i = 0; i < specialCodes.length; i++) {
-        if (input === specialCodes[i].code) {
+        if (input.toLowerCase() === specialCodes[i].code.toLocaleLowerCase()) {
             return true
         }
     }
@@ -25,7 +25,7 @@ function checkForCode(input) {
 
 function getObject(input) {
     for (let i = 0; i < specialCodes.length; i++) {
-        if (input === specialCodes[i].code) {
+        if (input.toLowerCase() === specialCodes[i].code.toLowerCase()) {
             return specialCodes[i];
         }
     }
